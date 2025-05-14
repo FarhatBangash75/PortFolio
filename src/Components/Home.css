@@ -1,0 +1,143 @@
+.Home-Main-dev{
+    display: grid;
+   grid-template-row:1fr;
+    width: 400px;
+    height: 300px;
+
+
+
+    margin-top: 5px;
+    position: relative;
+  
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.1ms forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.green {
+  color: green;
+}
+
+.pic{
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.Hello{
+    position:absolute;
+    margin-left: 50px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+
+
+}
+.Farhat-dev{
+    position: absolute;
+    margin-right:200px;
+    margin-top: 50px;
+     margin-left: 20px;
+     color: rgba(0, 0, 255, 0.568);
+}
+.Full-stack{
+    position: absolute;
+    margin-top: 90px;
+         margin-left: 20px;
+         color: green;
+
+}
+.text{
+    position: absolute;
+    margin-top: 140px;
+    margin-right: 70px;
+    margin-left: 20px;
+    color:silver;
+   
+}
+.View{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    margin-top: 200px;
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: rgba(137, 43, 226, 0.445);
+    color: aliceblue;
+    border:none;
+    cursor:Pointer;
+    transition:   background-Color 0.2s;
+    
+}
+.View:hover{
+    background-Color:white;
+    color: rgba(137, 43, 226, 0.445);
+    border:1px solid  rgba(137, 43, 226, 0.445)
+}
+.Submit{
+    margin-left: 130px;
+        position: absolute;
+    width: 100px;
+    height: 30px;
+    margin-top: 200px;
+    background-color: white;
+    border-radius: 20px;
+    border:1px solid  rgba(137, 43, 226, 0.445);
+    color:  rgba(137, 43, 226, 0.445);
+     cursor:Pointer;
+    transition:   background-Color 0.2s;
+    
+
+}
+.Submit:hover{
+       background-color: rgba(137, 43, 226, 0.445);
+    color: aliceblue;
+    border:1px solid  rgba(137, 43, 226, 0.445);
+}
+.Photo-dev{
+   position:relative;
+    display:flex;
+    flex-direction:row;
+    height:100px;
+    width:300px;
+    margin-bottom:200px;
+
+    margin-left:400px;
+
+}
+.eng-pics{
+    position:absolute;
+    height:200px;
+    width:200px;
+    border-radius:220px;
+}
+
+@media (max-width:550px){
+.Photo-dev {
+        flex-direction: column;
+        margin-left:300px;
+        margin-top:0px;
+    
+      
+    }
+
+    .eng-pics {
+        height: 140px;
+        width: 140px;
+    }
+.Home-Main-dev{
+    margin-right:100px;
+}
+.text{
+    font-size:0.4rem;
+  
+
+}
+
+}
