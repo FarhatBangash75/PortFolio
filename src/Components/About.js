@@ -38,9 +38,9 @@ function About() {
           </table>
         </div>
 
-     <a href="/FarhadIrshad.pdf" download>
-  <button className="cv-btn">Download CV</button>
-</a>
+        <a href="/FarhadIrshad.pdf" download>
+          <button className="cv-btn">Download CV</button>
+        </a>
       </div>
     </div>
   );

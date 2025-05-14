@@ -9,28 +9,36 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowFirst(false);
-    }, 3000); // 3 seconds delay
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className='Home-Main-dev'>
-      <img src={pics} alt='description' className='pic' />
-      <p className='Hello'>Hello, I am</p>
-      <h2 className='Farhat-dev'>Farhat Irshad</h2>
+    <div className="home-main">
+      <div className="home-content">
+        <img src={pics} alt="logo" className="logo-img" />
 
-      {showFirst ? (
-        <h2 className='Full-stack fade-in'>Web Developer</h2>
-      ) : (
-        <h2 className='Full-stack fade-in green'>Full Stack Web Developer</h2>
-      )}
+        <p className="intro">Hello, I am</p>
+        <h2 className="name">Farhat Irshad</h2>
 
-      <p className='text'>I build exceptional and professional web experience with technology</p>
-      <button className='View'>View Tasks</button>
-      <button className='Submit'>Contact Me</button>
+        {showFirst ? (
+          <h2 className="title fade-in">Web Developer</h2>
+        ) : (
+          <h2 className="title fade-in green">Full Stack Web Developer</h2>
+        )}
 
-      <div className='Photo-dev'>
-        <img src={eng2} alt='description' className='eng-pics' />
+        <p className="subtitle">
+          I build exceptional and professional web experiences with technology.
+        </p>
+
+        <div className="button-group">
+          <button className="btn primary">View Tasks</button>
+          <button className="btn secondary">Contact Me</button>
+        </div>
+      </div>
+
+      <div className="photo-container">
+        <img src={eng2} alt="engineer" className="profile-pic" />
       </div>
     </div>
   );

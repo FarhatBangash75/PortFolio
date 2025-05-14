@@ -1,19 +1,131 @@
-.Home-Main-dev{
-    display: grid;
-   grid-template-row:1fr;
-    width: 400px;
-    height: 300px;
+/* Home.css */
 
-
-
-    margin-top: 5px;
-    position: relative;
-  
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  color: #333;
+  line-height: 1.6;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4vw;
+  min-height: 100vh;
+  gap: 4vw;
+}
+
+.home-content {
+  flex: 1 1 300px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.logo-img {
+  height: auto;
+  max-height: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.intro {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 0.3rem;
+}
+
+.name {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #3f51b5;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: #555;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding-left:10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.primary {
+  background-color: #7b1fa2;
+  color: white;
+
+}
+
+.primary:hover {
+  background-color: white;
+  color: #7b1fa2;
+  border: 1px solid #7b1fa2;
+}
+
+.secondary {
+  background-color: white;
+  color: #7b1fa2;
+  border: 1px solid #7b1fa2;
+}
+
+.secondary:hover {
+  background-color: #7b1fa2;
+  color: white;
+}
+
+.photo-container {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation */
 .fade-in {
   opacity: 0;
-  animation: fadeIn 0.1ms forwards;
+  animation: fadeIn 0.6s forwards ease-in;
 }
 
 @keyframes fadeIn {
@@ -23,121 +135,24 @@
 }
 
 .green {
-  color: green;
+  color: #2e7d32;
 }
 
-.pic{
-    height: 20px;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-.Hello{
-    position:absolute;
-    margin-left: 50px;
-    margin-bottom: 0px;
-    margin-top: 10px;
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .home-main {
+    flex-direction: column-reverse;
+    padding: 5vw 4vw;
+    text-align: center;
+  }
 
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
 
-}
-.Farhat-dev{
-    position: absolute;
-    margin-right:200px;
-    margin-top: 50px;
-     margin-left: 20px;
-     color: rgba(0, 0, 255, 0.568);
-}
-.Full-stack{
-    position: absolute;
-    margin-top: 90px;
-         margin-left: 20px;
-         color: green;
-
-}
-.text{
-    position: absolute;
-    margin-top: 140px;
-    margin-right: 70px;
-    margin-left: 20px;
-    color:silver;
-   
-}
-.View{
-    position: absolute;
-    width: 100px;
-    height: 30px;
-    margin-top: 200px;
-    margin-left: 20px;
-    border-radius: 20px;
-    background-color: rgba(137, 43, 226, 0.445);
-    color: aliceblue;
-    border:none;
-    cursor:Pointer;
-    transition:   background-Color 0.2s;
-    
-}
-.View:hover{
-    background-Color:white;
-    color: rgba(137, 43, 226, 0.445);
-    border:1px solid  rgba(137, 43, 226, 0.445)
-}
-.Submit{
-    margin-left: 130px;
-        position: absolute;
-    width: 100px;
-    height: 30px;
-    margin-top: 200px;
-    background-color: white;
-    border-radius: 20px;
-    border:1px solid  rgba(137, 43, 226, 0.445);
-    color:  rgba(137, 43, 226, 0.445);
-     cursor:Pointer;
-    transition:   background-Color 0.2s;
-    
-
-}
-.Submit:hover{
-       background-color: rgba(137, 43, 226, 0.445);
-    color: aliceblue;
-    border:1px solid  rgba(137, 43, 226, 0.445);
-}
-.Photo-dev{
-   position:relative;
-    display:flex;
-    flex-direction:row;
-    height:100px;
-    width:300px;
-    margin-bottom:200px;
-
-    margin-left:400px;
-
-}
-.eng-pics{
-    position:absolute;
-    height:200px;
-    width:200px;
-    border-radius:220px;
-}
-
-@media (max-width:550px){
-.Photo-dev {
-        flex-direction: column;
-        margin-left:300px;
-        margin-top:0px;
-    
-      
-    }
-
-    .eng-pics {
-        height: 140px;
-        width: 140px;
-    }
-.Home-Main-dev{
-    margin-right:100px;
-}
-.text{
-    font-size:0.4rem;
-  
-
-}
-
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
 }
