@@ -1,77 +1,368 @@
-.Headers-Dev{
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-    width: 100%;
-    border: 2px solid whitesmoke;
-    justify-content: center;
+/* ══════════════════════════════════════
+   Headers.css — premium dark navbar
+   ══════════════════════════════════════ */
 
+/* ── Scroll progress bar ────────────── */
+.nav-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #a855f7, #06b6d4);
+  z-index: 1100;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ── Navbar root ────────────────────── */
+.nav-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 68px;
+  background: rgba(5, 5, 15, 0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-root--scrolled {
+  background: rgba(5, 5, 15, 0.92);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 8px 40px rgba(0,0,0,0.5);
+}
+
+/* ── Inner ──────────────────────────── */
+.nav-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 28px;
+  display: flex;
   align-items: center;
-    box-sizing: border-box;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    margin-left: 770px;
-    list-style-type: none;
-    
- 
-}
-body{
-    height: 1000px;
-}
-li{
-    padding: 5px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-li:hover{
-    color: blue;
-}
-.Name{
-    margin-right: 50px;
-    color: red;
-}
-.Dev-2{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 30px;
-    background-color: pink;
-    margin-top: 100px;
+  gap: 36px;
 }
 
+/* ── Logo ───────────────────────────── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+.nav-logo-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.nav-logo-avatar--lg {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nav-logo-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f1f5f9;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.nav-logo-role {
+  font-size: 10px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── Desktop nav links ──────────────── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #cbd5e1;
+  background: rgba(255,255,255,0.05);
+}
+
+.nav-link--active {
+  color: #f1f5f9 !important;
+  background: rgba(99,102,241,0.1) !important;
+  font-weight: 600;
+}
+
+.nav-link-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.nav-link-bar {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+}
+
+/* ── Right side ─────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Status pill */
+.nav-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(34,197,94,0.08);
+  border: 1px solid rgba(34,197,94,0.2);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.nav-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: navPulse 2s infinite;
+}
+
+@keyframes navPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+  50%       { box-shadow: 0 0 0 4px rgba(34,197,94,0); }
+}
+
+.nav-status-text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #22c55e;
+  letter-spacing: 0.03em;
+}
+
+/* CTA */
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+
+.nav-cta:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(99,102,241,0.35);
+}
+
+.nav-cta-icon {
+  width: 13px;
+  height: 13px;
+}
+
+/* ── Hamburger ──────────────────────── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  transition: background 0.2s;
+}
+
+.nav-burger:hover { background: rgba(255,255,255,0.09); }
+
+.nav-burger span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: #94a3b8;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform-origin: center;
+}
+
+.nav-burger--open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-burger--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-burger--open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── Mobile drawer ──────────────────── */
+.nav-drawer {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background: rgba(7, 7, 18, 0.98);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  backdrop-filter: blur(24px);
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+}
+
+.nav-drawer--open {
+  max-height: 520px;
+  padding: 20px 24px 28px;
+}
+
+.nav-drawer-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.nav-drawer-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.nav-drawer-role {
+  font-size: 11px;
+  color: #334155;
+  margin-top: 2px;
+}
+
+.nav-drawer-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 16px 0;
+}
+
+.nav-drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #475569;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  padding: 13px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-drawer-link:hover {
+  color: #e2e8f0;
+  background: rgba(255,255,255,0.04);
+}
+
+.nav-drawer-link--active {
+  color: #f1f5f9 !important;
+  background: rgba(99,102,241,0.1) !important;
+  font-weight: 600;
+}
+
+.nav-drawer-icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.nav-drawer-check {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-cta--drawer {
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 14px;
+  justify-content: center;
+}
+
+/* ── Responsive ─────────────────────── */
+@media (max-width: 900px) {
+  .nav-status { display: none; }
+}
 
 @media (max-width: 768px) {
-  .Headers-Dev  {
-    flex-direction: column;
-    background-color:wheat;
+  .nav-links,
+  .nav-cta:not(.nav-cta--drawer) {
+    display: none;
+  }
 
-}
-ul{
-    margin-right: 700px;
-    font-size: 0.68rem;
-}
-.Name{
-    position:absolute;
-    margin-right: 430px;
+  .nav-burger { display: flex; }
+
+  .nav-inner { gap: 16px; }
 }
 
-
+@media (max-width: 480px) {
+  .nav-logo-text { display: none; }
 }
-@media (max-width:550px) {
-    ul{
-        margin-right: 850px;
-    }
-    .Name{
-        position: absolute;
-        margin-left: 75px;
-        height: 20px;
-    }
-    .cont-d{
-        
-        margin-right:50px;
-    }
-    
-}
-

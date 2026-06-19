@@ -1,158 +1,347 @@
-/* Home.css */
+/* ══════════════════════════════════════
+   Home.css — professional dark hero
+   ══════════════════════════════════════ */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- 
-  color: #333;
-  line-height: 1.6;
-}
-
-.home-main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4vw;
+.hm-root {
   min-height: 100vh;
-  gap: 4vw;
-}
-
-.home-content {
-  flex: 1 1 300px;
-  max-width: 600px;
-  text-align: center;
-}
-
-.logo-img {
-  height: auto;
-  max-height: 50px;
-  margin-bottom: 1.5rem;
-}
-
-.intro {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  margin-bottom: 0.3rem;
-}
-
-.name {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: #3f51b5;
-  margin-bottom: 0.5rem;
-}
-
-.title {
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  color: #4caf50;
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  color: #555;
-  margin-bottom: 1.5rem;
-  padding: 0 1rem;
-}
-
-.button-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.btn {
-  padding-left:10px;
-  padding-right: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  transition: all 0.3s ease;
+  background: #05050f;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
- 
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
 }
 
-.primary {
-  background-color: #7b1fa2;
-  color: white;
-
+/* ── Background orbs ─────────────────── */
+.hm-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.primary:hover {
-  background-color: white;
-  color: #7b1fa2;
-  border: 1px solid #7b1fa2;
+.hm-orb--1 {
+  width: 480px;
+  height: 480px;
+  background: rgba(99, 102, 241, 0.12);
+  top: -120px;
+  left: -120px;
 }
 
-.secondary {
-  background-color: white;
-  color: #7b1fa2;
-  border: 1px solid #7b1fa2;
+.hm-orb--2 {
+  width: 380px;
+  height: 380px;
+  background: rgba(168, 85, 247, 0.1);
+  bottom: -80px;
+  right: -80px;
 }
 
-.secondary:hover {
-  background-color: #7b1fa2;
-  color: white;
-}
-
-.photo-container {
-  flex: 1 1 250px;
-  display: flex;
-  justify-content: center;
+/* ── Inner layout ───────────────────── */
+.hm-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-}
-
-.profile-pic {
+  gap: 80px;
+  max-width: 1080px;
   width: 100%;
-  max-width: 250px;
-  aspect-ratio: 1/1;
+}
+
+/* ── Left ───────────────────────────── */
+.hm-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Logo chip */
+.hm-logo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 6px 14px 6px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  width: fit-content;
+}
+
+.hm-logo {
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Animation */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.6s forwards ease-in;
+/* Greeting */
+.hm-greeting {
+  font-size: 16px;
+  color: #475569;
+  margin: 0;
+  font-weight: 500;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+/* Name */
+.hm-name {
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 900;
+  color: #f1f5f9;
+  margin: 0;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: linear-gradient(135deg, #f1f5f9 40%, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.green {
-  color: #2e7d32;
+/* Animated role */
+.hm-role-wrap {
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  .home-main {
-    flex-direction: column-reverse;
-    padding: 5vw 4vw;
+.hm-role {
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hm-caret {
+  display: inline-block;
+  animation: blink 0.9s step-end infinite;
+  -webkit-text-fill-color: #6366f1;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Description */
+.hm-desc {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 540px;
+}
+
+.hm-em {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+/* Stats */
+.hm-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hm-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hm-stat-n {
+  font-size: 28px;
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.hm-stat-l {
+  font-size: 11px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.hm-stat-div {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Buttons */
+.hm-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hm-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.hm-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.hm-btn--primary {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: #fff;
+}
+
+.hm-btn--primary:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(99,102,241,0.35);
+}
+
+.hm-btn--secondary {
+  background: rgba(255,255,255,0.05);
+  color: #94a3b8;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.hm-btn--secondary:hover {
+  background: rgba(255,255,255,0.09);
+  color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* ── Right — photo ──────────────────── */
+.hm-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hm-photo-ring {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #6366f1, #a855f7, #06b6d4);
+  box-shadow:
+    0 0 60px rgba(99,102,241,0.25),
+    0 20px 60px rgba(0,0,0,0.5);
+  animation: hmFloat 4s ease-in-out infinite;
+}
+
+@keyframes hmFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+.hm-photo-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #0d0d1a;
+  border: 3px solid #0d0d1a;
+}
+
+.hm-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+/* Floating badges */
+.hm-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(13,13,26,0.9);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.hm-badge-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.hm-badge--tl {
+  top: 16px;
+  left: -60px;
+  animation: hmBadgeFloat 3s ease-in-out infinite;
+}
+
+.hm-badge--br {
+  bottom: 24px;
+  right: -48px;
+  animation: hmBadgeFloat 3.5s ease-in-out infinite reverse;
+}
+
+@keyframes hmBadgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+/* ── Responsive ─────────────────────── */
+@media (max-width: 900px) {
+  .hm-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
     text-align: center;
   }
 
-  .button-group {
-    flex-direction: column;
-    align-items: center;
+  .hm-right {
+    order: -1;
   }
 
-  .btn {
-    width: 100%;
-    max-width: 250px;
+  .hm-logo-chip,
+  .hm-btns,
+  .hm-stats {
+    justify-content: center;
   }
+
+  .hm-desc {
+    margin: 0 auto;
+  }
+
+  .hm-photo-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hm-badge--tl { left: 0; top: -10px; }
+  .hm-badge--br { right: 0; bottom: -10px; }
+}
+
+@media (max-width: 480px) {
+  .hm-root { padding: 60px 16px; }
+  .hm-badge { display: none; }
 }
