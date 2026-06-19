@@ -148,13 +148,13 @@ function Contacts() {
           <svg viewBox="0 0 20 20" fill="none" className="ct-info-icon">
             <path d="M2 4h16v12H2V4zm0 0l8 7 8-7" stroke="#64748b" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
-          <span>your@email.com</span>
+          <span>farhatirshat4347855@gmail.com</span>
         </div>
         <div className="ct-info-item">
           <svg viewBox="0 0 20 20" fill="none" className="ct-info-icon">
             <path d="M10 2a6 6 0 016 6c0 4-6 10-6 10S4 12 4 8a6 6 0 016-6zm0 4a2 2 0 100 4 2 2 0 000-4z" stroke="#64748b" strokeWidth="1.5"/>
           </svg>
-          <span>Your City, Country</span>
+          <span>City:Peshawar Pakistan</span>
         </div>
       </div>
     </div>

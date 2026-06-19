@@ -114,13 +114,13 @@ function About() {
               ))}
             </div>
 
-            <a href="/Farhat_CV.pdf" download className="ab-cv-btn">
-              <svg viewBox="0 0 20 20" fill="none" className="ab-cv-icon">
-                <path d="M10 2v10m0 0l-3-3m3 3l3-3M3 15v1a2 2 0 002 2h10a2 2 0 002-2v-1"
-                  stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              Download CV
-            </a>
+          <a href={process.env.PUBLIC_URL + "/Farhat_CV.pdf"} download className="ab-cv-btn">
+  <svg viewBox="0 0 20 20" fill="none" className="ab-cv-icon">
+    <path d="M10 2v10m0 0l-3-3m3 3l3-3M3 15v1a2 2 0 002 2h10a2 2 0 002-2v-1"
+      stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+  Download CV
+</a>
           </div>
         </div>
 
