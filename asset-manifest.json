@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d91c154b.css",
+    "main.js": "/static/js/main.134a87ef.js",
+    "static/media/Forest_login.png": "/static/media/Forest_login.33d9fe57744d9d9a645b.png",
+    "static/media/Shoba_pazer_login.png": "/static/media/Shoba_pazer_login.e9426c3c6d6504c5ae15.png",
+    "static/media/WSSC_swat_Login.png": "/static/media/WSSC_swat_Login.d535d2370df76578ccec.png",
+    "static/media/AI_based_plant_detection.png": "/static/media/AI_based_plant_detection.9ff2ff27919b7940c175.png",
+    "static/media/Forest_dashboard_Forms.png": "/static/media/Forest_dashboard_Forms.004b224234ce47d48fc2.png",
+    "static/media/Farhat.jpeg": "/static/media/Farhat.a9c5f0ad16a068cc5f4c.jpeg",
+    "static/media/WSSC_SWAT_main.png": "/static/media/WSSC_SWAT_main.84471e7a3e8c1e73415b.png",
+    "static/media/Bills_law_firm.png": "/static/media/Bills_law_firm.8caa4d1dc3b39ff9d520.png",
+    "static/media/Shoba_bazer_overmainpage.png": "/static/media/Shoba_bazer_overmainpage.2bc6c7a76f739c8cfd56.png",
+    "static/media/Medicin_AI.png": "/static/media/Medicin_AI.eccce3ea791934cf22be.png",
+    "static/media/Forest_dashbord_minpage.png": "/static/media/Forest_dashbord_minpage.d96ca22c69f8650e98f1.png",
+    "static/media/Bill_law-Firm.png": "/static/media/Bill_law-Firm.76ce9df2bdf37b04f9d5.png",
+    "static/media/Forest_graph_pics.png": "/static/media/Forest_graph_pics.7b1c9efaafe0354aed06.png",
+    "static/media/Shoba_bazer_main_pics.png": "/static/media/Shoba_bazer_main_pics.9c1cb5fdac7fa2660f1c.png",
+    "static/media/Forest_dashboard_grah.png": "/static/media/Forest_dashboard_grah.8add2ef988cf0cd381a6.png",
+    "index.html": "/index.html",
+    "main.d91c154b.css.map": "/static/css/main.d91c154b.css.map",
+    "main.134a87ef.js.map": "/static/js/main.134a87ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d91c154b.css",
+    "static/js/main.134a87ef.js"
+  ]
+}
