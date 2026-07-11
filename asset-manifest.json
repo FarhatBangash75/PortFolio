@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.d91c154b.css",
-    "main.js": "/PortFolio/static/js/main.1072de22.js",
+    "main.js": "/PortFolio/static/js/main.067abcf2.js",
     "static/media/Forest_login.png": "/PortFolio/static/media/Forest_login.33d9fe57744d9d9a645b.png",
     "static/media/Shoba_pazer_login.png": "/PortFolio/static/media/Shoba_pazer_login.e9426c3c6d6504c5ae15.png",
     "static/media/WSSC_swat_Login.png": "/PortFolio/static/media/WSSC_swat_Login.d535d2370df76578ccec.png",
@@ -19,10 +19,10 @@
     "static/media/Forest_dashboard_grah.png": "/PortFolio/static/media/Forest_dashboard_grah.8add2ef988cf0cd381a6.png",
     "index.html": "/PortFolio/index.html",
     "main.d91c154b.css.map": "/PortFolio/static/css/main.d91c154b.css.map",
-    "main.1072de22.js.map": "/PortFolio/static/js/main.1072de22.js.map"
+    "main.067abcf2.js.map": "/PortFolio/static/js/main.067abcf2.js.map"
   },
   "entrypoints": [
     "static/css/main.d91c154b.css",
-    "static/js/main.1072de22.js"
+    "static/js/main.067abcf2.js"
   ]
 }
